@@ -1,0 +1,67 @@
+﻿@model IdentityClaims.Models.Lookup
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lookup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LookupCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LookupCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LookupDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LookupDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute5)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute5)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ActiveFlag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActiveFlag)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.LookupID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

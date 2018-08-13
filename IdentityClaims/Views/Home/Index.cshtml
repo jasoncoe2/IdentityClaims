@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h4>Identity Claims Example</h4>
+
+<p>Welcome to this site. After researching Identity Claims, I put together this example as to how I planned to use it. At the time of this article, there
+    wasn't a lot of documentation on how to use Claims. Hence this example. I tried to show three important things in this example.</p>
+
+<ul>
+    <li>First, I wanted to show a real-world example or something close that implements claims. I wanted the example to use a level of granularity below roles.
+    Thus, this example shows how to Manage (Add or Edit), Delete, or View data with seperate claims simulating more granular access.</li>
+    <li>Second, I wanted to show an implementation of claims in a master table. Unlike Roles, Claims does not have a table for master data. 
+    The claim is simply linked in the UserClaims or RoleClaims table. I have created a Lookup and LookupValues tables that I have used in other applications for Drop Down Lists.
+    In the Claims example, Attribute1 is the ClaimValue and Attribute3 is the ClaimType. I just the RoleName as the ClaimType. In the LookupValues table, I populated Attribute2 the same 
+    as Attribute1. This is in case I need a Drop Down List in the future. However, it is not used in this example. Role Claims are not used in this example.</li>
+    <li>Third, I want to implement a solution where User Claims are added or removed when the role is added or removed. In my implementation, when a role is granted, all claims from the master are either granted or removed. The 
+    Application Administrator has the option to user claims to control acccess. The User, Master Data and Admin menus are controlled by Role Authorization. The User and Master Data pages are controlled by User Claims. The Admin section is controlled by the Admin Role.</li>
+</ul>
+
+<p>Below are the seeded users for this application and the functions they have been granted. This can be reviewed under the User Claims Menu in the Admin Section.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                User Name
+            </th>
+            <th>
+                Role
+            </th>
+            <th>
+                Claims Allowed
+            </th>
+            <th>
+                Claims Denied
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                sarah@fakeemail.com
+            </td>
+            <td>
+                Customer Service
+            </td>
+            <td>
+                <ul>
+                    <li>Can View and Manage Sales Orders</li>
+                    <li>Can View Customer Pricing Report</li>
+                    <li>Can View Customer Master Data</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Cannot Delete Sales Orders</li>
+                    <li>Cannot View, Manage, or Delete Purchase Orders</li>
+                    <li>Cannot Edit or Delete Customer Master Data</li>
+                    <li>Cannot View, Edit or Delete Vendor Master Data</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                jon@fakeemail.com
+            </td>
+            <td>
+                Purchasing Buyer
+            </td>
+            <td>
+                <ul>
+                    <li>Can Manage and View Purchase Orders</li>
+                    <li>Can View Vendor Master Data</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Cannot Delete Purchase Orders</li>
+                    <li>Cannot Manage or Delete Vendor Master Data</li>
+                    <li>Cannot View, Manage, or Delete Sales Orders</li>
+                    <li>Cannot View Customer Pricing Report</li>
+                    <li>Cannot View, Manage, or Delete Customer Master Data</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                julie@fakeemail.com
+            </td>
+            <td>
+                Supply Chain Manager
+            </td>
+            <td>
+                <ul>
+                    <li>Can Manage or View Vendors</li>
+                    <li>Can Manage or View Customers</li>
+                    <li>Can Delete or View Sales Orders</li>
+                    <li>Can Delete or View Purchase Orders</li>
+                    <li>Can View Customer Pricing Report</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Cannot Delete Customer Master Data</li>
+                    <li>Cannot Delete Vendor Master Data</li>
+                    <li>Cannot Manage Sales Orders</li>
+                    <li>Cannot Manage Purchase Orders</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                dariella@fakeemail.com
+            </td>
+            <td>
+                Application Administrator
+            </td>
+            <td>
+                <ul>
+                    <li>Can access the Admin area in the Application by the granted Admin Role</li>
+                    <li>Can Delete or View Vendors</li>
+                    <li>Can Delete or View Customers</li>
+                    <li>Can View Sales Orders</li>
+                    <li>Can View Purchase Orders</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Cannot View Customer Pricing Report</li>
+                    <li>Cannot Manage Customer Master Data</li>
+                    <li>Cannot Manage Vendor Master Data</li>
+                    <li>Cannot Manage or Delete Sales Orders</li>
+                    <li>Cannot Manage or Delete Purchase Orders</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>

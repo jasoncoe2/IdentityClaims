@@ -1,0 +1,48 @@
+﻿@model IdentityClaims.Models.UsersViewModels.UserRolesViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Edit", "UserRoles", FormMethod.Post, new { urvm = Model }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.Id)
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.UserName, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @readonly = "readonly" })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @readonly = "readonly" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.RolesList, htmlAttributes: new { @class = "control-label" })
+                <br />
+                <span>
+                    @for (int i = 0; i < Model.RolesList.Count; i++)
+                    {
+                        @Html.HiddenFor(m => m.RolesList[i].Id)
+                        @Html.HiddenFor(m => Model.RolesList[i].Name)
+                        @Html.CheckBoxFor(m => m.RolesList[i].Checked)
+                        @Html.LabelFor(m => m.RolesList[i].Checked, Model.RolesList[i].Name)
+                        <br />
+                    }
+                </span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        }
+    </div>
+</div>
+@Html.ActionLink("Back To List", "Index")

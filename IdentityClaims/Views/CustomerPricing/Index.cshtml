@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Pricing</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Customer
+            </th>
+            <th>
+                Item
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Acme Corp
+            </td>
+            <td>
+                10 Inch Android Tablet
+            </td>
+            <td>
+                $299
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Acme Corp
+            </td>
+            <td>
+                12 Inch Android Tablet 
+            </td>
+            <td>
+                $399
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <a asp-controller="User" asp-action="Index">Back to Supply Chain</a>
+</div>
+

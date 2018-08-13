@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sales Orders</h2>
+<a asp-controller="SalesOrders" asp-action="Create">Create Order</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Sales Order Number
+            </th>
+            <th>
+                Customer
+            </th>
+            <th>
+                Order Description
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                1000
+            </td>
+            <td>
+                Acme Corp
+            </td>
+            <td>
+                New Printer
+            </td>
+            <td>
+                <a asp-controller="SalesOrders" asp-action="Edit">Edit</a> |
+                <a asp-controller="SalesOrders" asp-action="Details">Details</a> |
+                <a asp-controller="SalesOrders" asp-action="Delete">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1001
+            </td>
+            <td>
+                New York Corp
+            </td>
+            <td>
+                New Tablet
+            </td>
+            <td>
+                <a asp-controller="SalesOrders" asp-action="Edit">Edit</a> |
+                <a asp-controller="SalesOrders" asp-action="Details">Details</a> |
+                <a asp-controller="SalesOrders" asp-action="Delete">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

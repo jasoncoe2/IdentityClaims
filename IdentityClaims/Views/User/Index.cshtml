@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Supply Chain Management User</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <h4>Sales</h4>
+        <ul>
+            <li><a asp-controller="SalesOrders" asp-action="Index">Sales Orders</a></li>
+            <li><a asp-controller="CustomerPricing" asp-action="Index">Customer Pricing Report</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h4>Purchasing</h4>
+        <ul>
+            <li><a asp-controller="PurchaseOrders" asp-action="Index">Purchase Orders</a></li>
+        </ul>
+    </div>
+</div>
+

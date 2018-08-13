@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Vendors</h2>
+<a asp-controller="Vendors" asp-action="Create">Create Order</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Vendor Number
+            </th>
+            <th>
+                Vendor Name
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                State
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                1000
+            </td>
+            <td>
+                Acme Corp
+            </td>
+            <td>
+                Phoenix
+            </td>
+            <td>
+                AZ
+            </td>
+            <td>
+                <a asp-controller="Vendors" asp-action="Edit">Edit</a> |
+                <a asp-controller="Vendors" asp-action="Details">Details</a> |
+                <a asp-controller="Vendors" asp-action="Delete">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1001
+            </td>
+            <td>
+                Boston Electronics
+            </td>
+            <td>
+                Boston
+            </td>
+            <td>
+                MA
+            </td>
+            <td>
+                <a asp-controller="Vendors" asp-action="Edit">Edit</a> |
+                <a asp-controller="Vendors" asp-action="Details">Details</a> |
+                <a asp-controller="Vendors" asp-action="Delete">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

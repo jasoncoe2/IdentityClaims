@@ -1,0 +1,76 @@
+﻿@model IdentityClaims.Models.LookupValue
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LookupValue</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LookupValueCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LookupValueCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LookupValueDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LookupValueDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Attribute5)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Attribute5)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ActiveFlag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActiveFlag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lookup)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lookup.ActiveFlag)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="LookupValueID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

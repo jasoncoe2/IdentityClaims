@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Application Administration</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <h4>Access</h4>
+        <ul>
+            <li><a asp-controller="Roles" asp-action="Index">Roles</a></li>
+            <li><a asp-controller="Users" asp-action="Index">Users</a></li>
+            <li><a asp-controller="UserClaims" asp-action="Index">User Claims</a></li>
+            <li><a asp-controller="UserRoles" asp-action="Index">User Roles</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h4>Master Data</h4>
+        <ul>
+            <li><a asp-controller="Lookups" asp-action="Index">Lookups</a></li>
+            <li><a asp-controller="LookupValues" asp-action="Index">Lookup Values</a></li>
+        </ul>
+    </div>
+</div>

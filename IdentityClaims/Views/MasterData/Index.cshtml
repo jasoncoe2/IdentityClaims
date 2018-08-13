@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Master Data Management</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <h4>Sales</h4>
+        <ul>
+            <li><a asp-controller="Customers" asp-action="Index">Customers</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h4>Purchasing</h4>
+        <ul>
+            <li><a asp-controller="Vendors" asp-action="Index">Vendors</a></li>
+        </ul>
+    </div>
+</div>
+

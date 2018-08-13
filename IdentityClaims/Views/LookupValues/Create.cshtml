@@ -1,0 +1,71 @@
+﻿@model IdentityClaims.Models.LookupValue
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>LookupValue</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LookupID" class="control-label"></label>
+                <select asp-for="LookupID" class ="form-control" asp-items="ViewBag.LookupID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="LookupValueCode" class="control-label"></label>
+                <input asp-for="LookupValueCode" class="form-control" />
+                <span asp-validation-for="LookupValueCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LookupValueDesc" class="control-label"></label>
+                <input asp-for="LookupValueDesc" class="form-control" />
+                <span asp-validation-for="LookupValueDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attribute1" class="control-label"></label>
+                <input asp-for="Attribute1" class="form-control" />
+                <span asp-validation-for="Attribute1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attribute2" class="control-label"></label>
+                <input asp-for="Attribute2" class="form-control" />
+                <span asp-validation-for="Attribute2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attribute3" class="control-label"></label>
+                <input asp-for="Attribute3" class="form-control" />
+                <span asp-validation-for="Attribute3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attribute4" class="control-label"></label>
+                <input asp-for="Attribute4" class="form-control" />
+                <span asp-validation-for="Attribute4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Attribute5" class="control-label"></label>
+                <input asp-for="Attribute5" class="form-control" />
+                <span asp-validation-for="Attribute5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ActiveFlag" class="control-label"></label>
+                <select asp-for="ActiveFlag" class="form-control" asp-items="ViewBag.ActiveFlag"></select>
+                @*<input asp-for="ActiveFlag" class="form-control" />*@
+                <span asp-validation-for="ActiveFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
